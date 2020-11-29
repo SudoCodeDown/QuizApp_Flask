@@ -1,6 +1,6 @@
 Body {  
-    font-family: Calibri, Helvetica, sans-serif;  
-    background-color: pink;  
+    font-family: Calibri, Helvetica, sans-serif;
+    margin: 0px; 
 }  
 
 button {   
@@ -45,4 +45,9 @@ button:hover {
     height: 50%;
     width:50%; 
     background-color: lightblue;  
-}   
+    align: center;
+}  
+
+.content{
+    width:50%;
+}

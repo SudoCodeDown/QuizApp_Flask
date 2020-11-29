@@ -14,7 +14,7 @@
     {%for i in questions%}
         <p>{{i['question']}}<p>
         {%for opt in i['option']%}
-            <input type="checkbox">{{opt['value']}}</input><br>
+            <input type="radio">{{opt['value']}}</input><br>
         {%endfor%}
         <br>
     {% endfor %}
