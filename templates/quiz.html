@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+  
+  <h1>Quiz Platform</h1>
+  
+  <div class="paltform">
+    {%for i in questions%}
+        <p>{{i['question']}}<p>
+        {%for opt in i['option']%}
+            <input type="checkbox">{{opt['value']}}</input><br>
+        {%endfor%}
+        <br>
+    {% endfor %}
+    <button type="submit">Submit</button> 
+  </div>
+
+{% endblock %}
