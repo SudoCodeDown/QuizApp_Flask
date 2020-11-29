@@ -22,7 +22,7 @@ quiz={
             ]
         },
         {
-            "question":"What is your name 2",
+            "question":'''What is your name 2''',
             "option":[
                 {
                     "value":"1",
