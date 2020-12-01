@@ -11,28 +11,14 @@
     <center> 
         <h2> Admin Login Form </h2> 
     </center>   
-    <form>  
+    <form action="" method="post">  
         <div class="container">   
-            <div>
-                <label>Username :</label>   
-                <input type="text" placeholder="Enter Username" name="username" required /> 
-            </div> 
-            <div>
-                <label>Password :</label>   
-                <input type="password" placeholder="Enter Password" name="password" required />  
-            </div>
-            <div>
-                <center>
-                    <button type="submit">Login</button> 
-                </center> 
-            </div>   
-            <div>
-                <center>
-                    <input type="checkbox" checked="checked"> Remember me</input>
-                    <button type="button" class="cancelbtn"> Cancel</button>  
-                    Forgot <a href="#"> password? </a>
-                </center>
-            </div>  
+            <input type="text" placeholder="Username" name="username" value="{{request.form.username }}">
+            <input type="password" placeholder="Password" name="password" value="{{request.form.password }}">
+            <input class="btn btn-default" type="submit" value="Login">
+            {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}
+            {% endif %}  
         </div>   
     </form> 
 

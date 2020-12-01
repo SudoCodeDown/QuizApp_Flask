@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, request, redirect
 from create_quiz import quiz as q
 
 app = Flask(__name__)
@@ -8,9 +8,15 @@ app = Flask(__name__)
 def view():
     return render_template("base.html")
 
-@app.route('/admin/')
+@app.route('/admin/', methods=['GET', 'POST'])
 def admin_login():
-    return render_template("admin_login.html")
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'Copy_Cat_2050' or request.form['password'] != 'DataSecurity@12345':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return redirect(url_for('view'))
+    return render_template("admin_login.html", error=error)
 
 @app.route('/<quiz>/')
 def quiz(quiz):
