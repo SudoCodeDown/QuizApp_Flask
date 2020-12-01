@@ -15,8 +15,12 @@ def admin_login():
         if request.form['username'] != 'Copy_Cat_2050' or request.form['password'] != 'DataSecurity@12345':
             error = 'Invalid Credentials. Please try again.'
         else:
-            return redirect(url_for('view'))
+            return redirect(url_for('create_quiz'))
     return render_template("admin_login.html", error=error)
+
+@app.route('/admin/create_quiz')
+def create_quiz():
+    return render_template("create_quiz.html")
 
 @app.route('/<quiz>/')
 def quiz(quiz):
