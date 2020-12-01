@@ -5,12 +5,14 @@ Body {
 
 button {   
     background-color: #4CAF50;   
-    width: 100%;  
+    width: 50%;  
     color: orange;   
     padding: 15px;   
     margin: 10px 0px;   
     border: none;   
-    cursor: pointer;   
+    cursor: pointer;  
+    align-self: center;
+    align-items: center; 
 }   
 
 form {   
@@ -40,14 +42,18 @@ button:hover {
           
        
    
-.container {   
+.container {  
+    position: absolute; 
     padding: 25px; 
-    height: 50%;
     width:50%; 
+    left:25%;
     background-color: lightblue;  
-    align: center;
 }  
 
 .content{
-    width:50%;
+    position: relative; 
+    padding: 25px; 
+    width:50%; 
+    left:25%;
+    background-color: lightblue;  
 }
