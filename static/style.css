@@ -5,7 +5,7 @@ Body {
 
 button {   
     background-color: #4CAF50;   
-    width: 50%;  
+    width: 25%;  
     color: orange;   
     padding: 15px;   
     margin: 10px 0px;   
@@ -41,7 +41,9 @@ button:hover {
 }   
           
        
-   
+.platform{
+    align-items: center;
+} 
 .container {  
     position: absolute; 
     padding: 25px; 

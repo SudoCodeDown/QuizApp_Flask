@@ -28,7 +28,8 @@ def create_quiz():
 @app.route('/<quiz>/', methods=['GET', 'POST'])
 def quiz(quiz):
     if request.method ==  'POST' :
-        print(request.form)
+        for answer in request.form:
+            print(request.form[answer])
     return render_template("quiz.html", questions=q[quiz])
 
 
