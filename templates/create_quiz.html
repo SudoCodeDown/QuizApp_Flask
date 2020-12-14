@@ -8,7 +8,14 @@
 
 {% block content %}
   
-  <h1>Lets start creating the quiz</h1>
-  
+  <form action="" method="post">  
+    <div class="container">   
+      Quiz Name:<input type="text" placeholder="quiz_name" name="quiz_name" value="{{request.form.quiz_name}}">
+      <input class="btn btn-default" type="submit" value="Submit">
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}  
+    </div>   
+  </form> 
 
 {% endblock %}

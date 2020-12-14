@@ -11,14 +11,20 @@
   <h1>Quiz Platform</h1>
   
   <div class="paltform">
-    {%for i in questions%}
-        <p>{{i['question']}}<p>
-        {%for opt in i['option']%}
-            <input type="radio">{{opt['value']}}</input><br>
-        {%endfor%}
+  <form action="" method="post">
+    {% for q in questions %}
+      {% set index = loop.index %}
+        <p>{{q['question']}}<p>
+        {%for opt in q['option']%}
+            <input type="radio" value="{{ opt['value'] }}" name="answer_{{index}}">
+              {{opt['value']}}
+            </input>
+            <br>
+        {% endfor %}
         <br>
     {% endfor %}
     <button type="submit">Submit</button> 
+    </form>
   </div>
 
 {% endblock %}

@@ -18,12 +18,17 @@ def admin_login():
             return redirect(url_for('create_quiz'))
     return render_template("admin_login.html", error=error)
 
-@app.route('/admin/create_quiz')
+@app.route('/admin/create_quiz', methods=['GET','POST'])
 def create_quiz():
+    error = None
+    if request.method == 'POST':
+        print(request.form)
     return render_template("create_quiz.html")
 
-@app.route('/<quiz>/')
+@app.route('/<quiz>/', methods=['GET', 'POST'])
 def quiz(quiz):
+    if request.method ==  'POST' :
+        print(request.form)
     return render_template("quiz.html", questions=q[quiz])
 
 
