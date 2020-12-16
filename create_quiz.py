@@ -1,7 +1,7 @@
 quiz={
     "quiz_name":[
         {
-            "question":"What is your name",
+            "question":"Hi Anjali",
             "option":[
                 {
                     "value":"1",
@@ -17,7 +17,7 @@ quiz={
                 },
                 {
                     "value":"4",
-                    "answer":False
+                    "answer":True
                 },
             ]
         },
@@ -34,7 +34,7 @@ quiz={
                 },
                 {
                     "value":"3",
-                    "answer":False
+                    "answer":True
                 },
                 {
                     "value":"4",
@@ -47,7 +47,7 @@ quiz={
             "option":[
                 {
                     "value":"1",
-                    "answer":False
+                    "answer":True
                 },
                 {
                     "value":"2",
@@ -72,7 +72,7 @@ quiz={
                 },
                 {
                     "value":"2",
-                    "answer":False
+                    "answer":True
                 },
                 {
                     "value":"3",
@@ -85,7 +85,7 @@ quiz={
             ]
         },
     ],
-    "quiz_name_2":[
+    "MRI":[
         {
             "question":"Hello",
             "option":[

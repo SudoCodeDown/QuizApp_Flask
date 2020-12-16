@@ -16,7 +16,7 @@
       {% set index = loop.index %}
         <p>{{q['question']}}<p>
         {%for opt in q['option']%}
-            <input type="radio" value="{{ opt['value'] }}" name="answer_{{index}}">
+            <input type="radio" value="{{ opt['answer'] }}" name="answer_{{index}}">
               {{opt['value']}}
             </input>
             <br>
