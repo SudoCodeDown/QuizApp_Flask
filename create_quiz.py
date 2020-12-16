@@ -1,7 +1,7 @@
 quiz={
     "quiz_name":[
         {
-            "question":"Hi Anjali",
+            "question":"What is your name 1",
             "option":[
                 {
                     "value":"1",
